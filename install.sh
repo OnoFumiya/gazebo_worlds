@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "╔══╣ Setup: SOBITS Gazebo Worlds (STARTING) ╠══╗"
+echo "╔══╣ Setup: Gazebo Worlds (STARTING) ╠══╗"
 
 sudo apt update
 
@@ -22,8 +22,8 @@ cd ${DIR}
 mkdir -p ~/.ignition/gazebo/6/
 sudo cp -r config/gui.config ${HOME}/.ignition/gazebo/6/
 
-echo "export GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/sobits_gazebo_worlds/share/sobits_gazebo_worlds/models" >> ~/.bashrc
-export "GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/sobits_gazebo_worlds/share/sobits_gazebo_worlds/models"
+echo "export GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/gazebo_worlds/share/gazebo_worlds/models" >> ~/.bashrc
+export "GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/gazebo_worlds/share/gazebo_worlds/models"
 
 echo "export GZ_SIM_RESOURCE_PATH=${GZ_SIM_RESOURCE_PATH}:~/colcon_ws/install/tmc_wrs_gz_worlds/share/tmc_wrs_gz_worlds/models" >> ~/.bashrc
 export "GZ_SIM_RESOURCE_PATH="${GZ_SIM_RESOURCE_PATH}":~/colcon_ws/install/tmc_wrs_gz_worlds/share/tmc_wrs_gz_worlds/models"
@@ -32,4 +32,4 @@ echo "export GZ_SIM_RESOURCE_PATH=${GZ_SIM_RESOURCE_PATH}:~/colcon_ws/install/aw
 export "GZ_SIM_RESOURCE_PATH="${GZ_SIM_RESOURCE_PATH}":~/colcon_ws/install/aws_small_house_world/share/aws_small_house_world/models"
 
 
-echo "╚══╣ Setup: SOBITS Gazebo Worlds (FINISHED) ╠══╝"
+echo "╚══╣ Setup: Gazebo Worlds (FINISHED) ╠══╝"
