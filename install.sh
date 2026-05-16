@@ -2,6 +2,7 @@
 echo "╔══╣ Setup: Gazebo Worlds (STARTING) ╠══╗"
 
 sudo apt update
+sudo apt install ros-$ROS_DISTRO-xacro
 
 DIR=$(pwd)
 cd ..
