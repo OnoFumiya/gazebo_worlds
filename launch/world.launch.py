@@ -8,7 +8,7 @@ import os
 
 def generate_launch_description():
     world_file_path = PathJoinSubstitution([
-        get_package_share_directory('sobits_gazebo_worlds'),
+        get_package_share_directory('gazebo_worlds'),
         'worlds',
         'rcjo2025_arena.world.xacro'
     ])
