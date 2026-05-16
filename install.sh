@@ -21,8 +21,8 @@ cd ${DIR}
 
 # echo "export GZ_SIM_RESOURCE_PATH=${HOME}/colcon_ws/install/sobits_gazebo_worlds/share/sobits_gazebo_worlds/models" >> ~/.bashrc
 
-mkdir -p ~/.gz/sim/8/
-sudo cp -r config/gui.config ${HOME}/.gz/sim/8/
+mkdir -p ~/.gz/sim/10/
+sudo cp -r config/gui.config ${HOME}/.gz/sim/10/
 
 echo "export GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/gazebo_worlds/share/gazebo_worlds/models" >> ~/.bashrc
 export "GZ_SIM_RESOURCE_PATH=~/colcon_ws/install/gazebo_worlds/share/gazebo_worlds/models"
