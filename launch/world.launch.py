@@ -19,9 +19,9 @@ from launch_utils import build_gz_resource_path
 def generate_launch_description():
     world_arg = DeclareLaunchArgument(
         'world',
-        default_value='rcjo2025_arena.world.xacro',
+        default_value='multi_floor_cafeteria.world.xacro',
         description=(
-            'World filename under sobits_gazebo_worlds/worlds. '
+            'World filename under gazebo_worlds/worlds. '
             'Options: precomp2025_arena.world.xacro, '
             'rcjo2025_arena.world.xacro, '
             'rcjo2026_arena.world.xacro'
@@ -29,7 +29,7 @@ def generate_launch_description():
     )
 
     world_file_path = PathJoinSubstitution([
-        get_package_share_directory('sobits_gazebo_worlds'),
+        get_package_share_directory('gazebo_worlds'),
         'worlds',
         LaunchConfiguration('world')
     ])
@@ -38,7 +38,7 @@ def generate_launch_description():
         world_arg,
         SetEnvironmentVariable(
             name='GZ_SIM_RESOURCE_PATH',
-            value=build_gz_resource_path(get_package_share_directory('sobits_gazebo_worlds')),
+            value=build_gz_resource_path(get_package_share_directory('gazebo_worlds')),
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(

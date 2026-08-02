@@ -36,7 +36,7 @@ def generate_launch_description():
     base_world_arg = DeclareLaunchArgument(
         'base_world',
         default_value=PathJoinSubstitution([
-            get_package_share_directory('sobits_gazebo_worlds'),
+            get_package_share_directory('gazebo_worlds'),
             'worlds',
             'rcjo2025_arena.world.xacro',
         ]),
@@ -46,7 +46,7 @@ def generate_launch_description():
     placement_config_arg = DeclareLaunchArgument(
         'placement_config',
         default_value=PathJoinSubstitution([
-            get_package_share_directory('sobits_gazebo_worlds'),
+            get_package_share_directory('gazebo_worlds'),
             'config',
             'placement',
             'rcjo2025_arena.yaml',
@@ -57,7 +57,7 @@ def generate_launch_description():
     models_root_arg = DeclareLaunchArgument(
         'models_root',
         default_value=PathJoinSubstitution([
-            get_package_share_directory('sobits_gazebo_worlds'),
+            get_package_share_directory('gazebo_worlds'),
             'models',
             'ycb',
         ]),
@@ -109,7 +109,7 @@ def generate_launch_description():
     output_world_name_arg = DeclareLaunchArgument(
         'output_world_name',
         default_value='rcjo2025_version_1',
-        description='Optional output world filename saved under sobits_gazebo_worlds/worlds.',
+        description='Optional output world filename saved under gazebo_worlds/worlds.',
     )
 
     return LaunchDescription(
@@ -135,7 +135,7 @@ def _resolve_worlds_output_dir(package_share):
     source_worlds_dir = os.path.join(
         os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(package_share)))),
         'src',
-        'sobits_gazebo_worlds',
+        'gazebo_worlds',
         'worlds',
     )
     if os.path.isdir(source_worlds_dir):
@@ -152,7 +152,7 @@ def _normalize_world_filename(output_world_name):
 
 
 def _launch_setup(context, *args, **kwargs):
-    package_share = get_package_share_directory('sobits_gazebo_worlds')
+    package_share = get_package_share_directory('gazebo_worlds')
     models_package_root = os.path.join(package_share, 'models')
     generator = os.path.join(package_share, 'scripts', 'generate_worlds.py')
     launch_gazebo = LaunchConfiguration('launch_gazebo').perform(context).lower() == 'true'
@@ -288,7 +288,7 @@ def _launch_setup(context, *args, **kwargs):
             ],
         ),
         Node(
-            package='sobits_gazebo_worlds',
+            package='gazebo_worlds',
             executable='random_world_manager.py',
             output='screen',
             parameters=[
