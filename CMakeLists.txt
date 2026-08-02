@@ -12,10 +12,17 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 install(DIRECTORY
+  config
   launch
   models
+  scripts
   worlds
   DESTINATION share/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+  scripts/random_world_manager.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 if(BUILD_TESTING)

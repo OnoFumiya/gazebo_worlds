@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="multi_floor_cafeteria_floor">
+    <!-- <static>true</static> -->
+    <link name="link">
+      <collision name="floor1">
+        <!-- <pose>0.0 0.5 0.0 0.0 0.0 0.0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>9 11</size>
+          </plane>
+        </geometry>
+
+        <surface>
+          <contact>
+             <collide_bitmask>0xffff</collide_bitmask>
+          </contact>
+
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface> -->
+        <pose>0.0 0.5 -0.01 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>9.0 11.0 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="floor1_v">
+        <!-- <pose>0.0 0.5 0.0 0.0 0.0 0.0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>9 11</size>
+          </plane>
+        </geometry> -->
+        <pose>0.0 0.5 -0.01 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>9.0 11.0 0.01</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 </diffuse>
+          <specular>1.0 1.0 1.0 </specular>
+          <pbr>
+            <metal>
+              <albedo_map>model://multi_floor_cafeteria/floor/materials/photos_2015_09_18_fst_765b3qqmm4v.jpg</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+
+      <collision name="floor2">
+        <!-- <pose>0.0 0.0 3.0 0.0 0.0 0.0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>8 10</size>
+          </plane>
+        </geometry>
+
+        <surface>
+          <contact>
+             <collide_bitmask>0xffff</collide_bitmask>
+          </contact>
+
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface> -->
+        <pose>0.0 0.0 2.99 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>8.0 10.0 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="floor2_v">
+        <!-- <pose>0.0 0.0 3.0 0.0 0.0 0.0</pose>
+
+        <geometry>
+          <plane>
+            <normal>0 0 -1</normal>
+            <size>8 10</size>
+          </plane>
+        </geometry> -->
+        <pose>0.0 0.0 2.99 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>8.0 10.0 0.01</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 </diffuse>
+          <specular>1.0 1.0 1.0 </specular>
+          <double_sided>true</double_sided>
+          <pbr>
+            <metal>
+              <albedo_map>model://multi_floor_cafeteria/floor/materials/photos_2015_09_18_fst_765b3qqmm4v.jpg</albedo_map>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

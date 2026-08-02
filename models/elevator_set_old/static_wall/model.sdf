@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="multi_floor_cafeteria_frame">
+    <static>true</static>
+    <link name="link">
+      <inertial>
+        <mass>1.0</mass>
+      </inertial>
+
+      <collision name="left_wall_f1">
+        <pose>-1.075 0.735 1.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="left_wall_f1_v">
+        <pose>-1.075 0.735 1.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0 1.0</specular>
+        </material>
+      </visual>
+
+      <collision name="right_wall_f1">
+        <pose>-1.075 -0.735 1.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="right_wall_f1_v">
+        <pose>-1.075 -0.735 1.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0 1.0</specular>
+        </material>
+      </visual>
+
+      <collision name="left_wall_f2">
+        <pose>-1.075 0.735 4.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="left_wall_f2_v">
+        <pose>-1.075 0.735 4.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0 1.0</specular>
+        </material>
+      </visual>
+
+      <collision name="right_wall_f2">
+        <pose>-1.075 -0.735 4.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="right_wall_f2_v">
+        <pose>-1.075 -0.735 4.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.53 2.0</size>
+          </box>
+        </geometry>
+
+        <material>
+          <diffuse>1.0 1.0 1.0 1.0</diffuse>
+          <specular>1.0 1.0 1.0 1.0</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
