@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "╔══╣ Setup: SOBITS Gazebo Worlds (STARTING) ╠══╗"
+echo "╔══╣ Setup: Gazebo Worlds (STARTING) ╠══╗"
 
 
 # Add Gazebo models to GZ_SIM_RESOURCE_PATH
