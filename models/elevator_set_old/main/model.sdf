@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+
+  <actor name="Elevator_Cabin">
+
+    <pose>0 0 0 0 0 0</pose>
+
+    <link name="cabin_link">
+      <inertial>
+        <mass>50.0</mass>
+      </inertial>
+
+      <collision name="bottom">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 1.98 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="bottom_v">
+        <pose>0 0 -0.025 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 1.98 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="wall_back">
+        <pose>0.965 0 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 1.98 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wall_back_v">
+        <pose>0.965 0 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 1.98 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="wall_left">
+        <pose>0 0.965 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 0.05 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wall_left_v">
+        <pose>0 0.965 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 0.05 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="wall_right">
+        <pose>0 -0.965 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 0.05 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wall_right_v">
+        <pose>0 -0.965 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1.98 0.05 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="wall_front_left">
+        <pose>-0.915 0.705 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.47 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wall_front_left_v">
+        <pose>-0.915 0.705 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.47 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="wall_front_right">
+        <pose>-0.915 -0.705 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.47 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="wall_front_right_v">
+        <pose>-0.915 -0.705 1.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.47 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+          <diffuse>0.5 0.5 0.5 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <script>
+      <loop>true</loop>
+      <delay_start>0.000000</delay_start>
+      <auto_start>true</auto_start>
+
+      <trajectory id="0" tension="1.0" type="cabin_motion">
+
+        <waypoint>
+          <time>0.0</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>7.5</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>15.0</time>
+          <pose>0 0 3.0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>30.0</time>
+          <pose>0 0 3.0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>37.5</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>45.0</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+
+      </trajectory>
+
+    </script>
+
+  </actor>
+
+</sdf>

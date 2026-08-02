@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+
+  <actor name="Elevator_Door">
+    <pose>0 0 0 0 0 0</pose>
+
+    <link name="door_link">
+      <inertial>
+        <mass>5.0</mass>
+      </inertial>
+
+      <collision name="outer_door">
+        <pose>-1.025 -0.25 4.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.5 2.0</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="outer_door_v">
+        <pose>-1.025 -0.25 4.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.04 0.5 2.0</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.2 0.5 0.2 1</ambient>
+          <diffuse>0.2 0.5 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <script>
+      <loop>true</loop>
+      <delay_start>0.000000</delay_start>
+      <auto_start>true</auto_start>
+
+      <trajectory id="0" tension="1.0" type="door_motion">
+
+        <waypoint>
+          <time>0.0</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+
+        <waypoint>
+          <time>15.0</time>
+          <pose>0 0 0.0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>17.0</time>
+          <pose>0 -0.47 0 0 0 0</pose>
+        </waypoint>
+
+        <waypoint>
+          <time>27.5</time>
+          <pose>0 -0.47 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>29.5</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>45.0</time>
+          <pose>0 0 0 0 0 0</pose>
+        </waypoint>
+
+      </trajectory>
+
+    </script>
+
+  </actor>
+
+</sdf>
