@@ -18,14 +18,14 @@ for ((i = 0; i < ${#ros_packages[@]}; i++)) {
     git clone -b jazzy-devel https://github.com/TeamSOBITS/${ros_packages[i]}.git
 }
 
-cd tmc_wrs_gz/tmc_wrs_gz
-sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
+# cd tmc_wrs_gz/tmc_wrs_gz
+# sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
 
-cd ../tmc_wrs_gz_launch
-sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
+# cd ../tmc_wrs_gz_launch
+# sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
 
-cd ../../aws_small_house_world
-sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
+# cd ../../aws_small_house_world
+# sed -i "s/cmake_minimum_required(VERSION 3.8)/cmake_minimum_required(VERSION 3.10)/" CMakeLists.txt
 
 cd ${DIR}
 
